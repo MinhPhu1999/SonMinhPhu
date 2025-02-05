@@ -6,7 +6,6 @@
 
     <!-- You may add more stuff here -->
     <link href="style.css" rel="stylesheet" />
-    <link href="script.js" rel="script" />
 </head>
 
 <body>
@@ -17,7 +16,7 @@
             <div class="group">
                 <label for="input-amount">Amount to send</label>
                 <select id="fromCurrency" onchange="convertCurrency(`input-amount`,`output-amount`);"></select>
-                <input id="input-amount" type="number" value="0" min="0" step="any"
+                <input id="input-amount" type="number" value="0" min="0" step="any" placeholder="Type a number"
                     oninput="convertCurrency(`input-amount`,`output-amount`);" />
             </div>
             <div class="group">
@@ -26,7 +25,7 @@
             <div class="group">
                 <label for="output-amount">Amount to receive</label>
                 <select id="toCurrency" onchange="convertCurrency(`output-amount`,`input-amount`);"></select>
-                <input id="output-amount" type="number" value="0" min="0" step="any"
+                <input id="output-amount" type="number" value="0" min="0" step="any" placeholder="Type a number"
                     oninput="convertCurrency(`output-amount`,`input-amount`);" />
             </div>
         </div>
