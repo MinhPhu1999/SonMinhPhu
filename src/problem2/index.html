@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fancy Form</title>
+
+    <!-- You may add more stuff here -->
+    <link href="style.css" rel="stylesheet" />
+    <link href="script.js" rel="script" />
+</head>
+
+<body>
+
+    <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
+    <form onsubmit="return !1">
+        <div class="currencyPanel">
+            <div class="group">
+                <label for="input-amount">Amount to send</label>
+                <select id="fromCurrency" onchange="convertCurrency(`input-amount`,`output-amount`);"></select>
+                <input id="input-amount" type="number" value="0" min="0" step="any"
+                    oninput="convertCurrency(`input-amount`,`output-amount`);" />
+            </div>
+            <div class="group">
+                <button onClick="onConfirmSwap();">CONFIRM SWAP</button>
+            </div>
+            <div class="group">
+                <label for="output-amount">Amount to receive</label>
+                <select id="toCurrency" onchange="convertCurrency(`output-amount`,`input-amount`);"></select>
+                <input id="output-amount" type="number" value="0" min="0" step="any"
+                    oninput="convertCurrency(`output-amount`,`input-amount`);" />
+            </div>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
